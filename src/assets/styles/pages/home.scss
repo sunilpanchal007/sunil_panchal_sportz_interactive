@@ -1,0 +1,308 @@
+
+
+.section1_main {
+    background-image: 
+      url("../../images/left_dots_BG.svg"),
+      url("../../images/right_dots_BG.svg"),
+    linear-gradient($primary-liner);
+    background-position: left top, right bottom, center;
+    background-size: contain;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px 0px 60px 0px;
+    @include media($xl){
+      padding: 60px 0px 60px 0px;
+    }
+    @include media($sm){
+      padding: 32px 15px 32px 15px;
+    }
+    h1{
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 2px;
+      @include media($sm){
+        font-size: 12px;
+        text-align: center;
+        width: 80%;
+        line-height: 1.5;
+        letter-spacing: 1px;
+      }
+      img{
+        margin-right: 5px;
+      }
+    }
+    .start_time{
+      font-size: 14px;
+      @include media($sm){
+        font-size: 12px;
+      }
+    }
+}
+.live-badge-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  position: relative;
+  margin: 10px 0;
+  @include media($md){
+    width: 500px;
+  }
+  @include media($sm){
+    width: 90%;
+    margin: 10px 0;
+  }
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: $alpha-white;
+  }
+
+  .live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: $green;
+    color: $white;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: $white;
+      border-radius: 50%;
+      outline: 2px solid #80c398;
+      margin-right: 5px;
+    }
+  }
+}
+
+.teams_score{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  max-width: $container-width;
+  align-items: center;
+  color: $white-smoke;
+  .team_score{
+    font-size: 28px;
+    font-weight: 700;
+    border-bottom: 1px solid $alpha-white;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    @include media($sm){
+      font-size: 18px;
+    }
+    padding-bottom: 10px;
+    span{
+      font-weight: 300;
+      font-size: 12px;
+      @include media($sm){
+        font-size: 10px;
+      }
+    }
+  }
+  .player_score{
+    font-size: 20px;
+    border-bottom: 1px solid $alpha-white;
+    margin: 0px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    @include media($sm){
+      font-size: 16px;
+    } 
+    span{
+      font-weight: 300;
+      font-size: 12px;
+      @include media($sm){
+        font-size: 10px;
+      } 
+    }
+    &.active {
+      color: $white;
+      
+    }
+  }
+  .team_info{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    @include media($sm){
+      column-gap: 10px;
+    }
+    .team_two{
+      text-align: right;
+    }
+    .team_logo{
+      background-color: $white;
+      padding: 30px;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      @include media($md){
+        padding: 15px 18px;
+        border-radius: 50%;
+      }
+      img{
+        width: 75%;
+        height: auto;
+        @include media($sm){
+          height: 30px;
+          width: 30px;
+        }
+      }
+      &.active {
+        outline: 3px solid $pink;
+      }
+    }
+  }
+  .vs_div{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 7px 8px;
+    border-radius: 50%;
+    @include media($sm){
+      padding: 5px 6px;
+    } 
+    p{
+      margin: 0px;
+      color: $white;
+      font-weight: 500;
+      @include media($sm){
+        font-size: 10px;
+        font-weight: 600;
+      } 
+    }
+  }
+}
+.need_run_info{
+  font-weight: 500;
+  font-size: 16px;
+  border-top: 1px solid $alpha_white ;
+  border-bottom: 1px solid $alpha_white ;
+  padding: 5px 50px;
+  margin-top: 25px;
+  @include media($sm){
+    padding: 5px 5px;
+  }
+  p{
+    letter-spacing: 1px;
+    font-weight: 400;
+    @include media($sm){
+      font-size: 12px;
+      text-align: center;
+      line-height: 1.5;
+    }
+  }
+}
+.match_venue{
+  padding: 15px 0px;
+  @include media($sm){
+    padding: 10px 0px;
+  }
+  p{
+    color: $white-smoke;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    @include media($sm){
+      font-size: 12px;
+    }
+    img{
+      margin-right: 5px;
+      vertical-align: middle;
+      @include media($sm){
+        width: 14px;
+        vertical-align: text-top;
+      }
+    }
+  }
+}
+.scorecard_main{
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  @include media($md){
+    flex-direction: column;
+  }
+}
+.latest_update_main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 25px;
+  @include media($sm){
+    padding: 0px 10px;
+  }
+}
+.last_update_preview{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  width: 100%;  
+  max-width: $container-width;
+  @include media($md){
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+.latest_update_head{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: $container-width;
+  padding-top: 10px;
+  @include media($sm){
+    padding-top: 5px;
+  }
+  h2{
+    font-size: 20px;
+    @include media($sm){
+      font-size: 16px;
+    }
+  }
+  a{
+    color: $pink;
+    text-decoration: 1px underline;
+    text-underline-offset: 2px;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    @include media($sm){
+      font-size: 12px;
+    }
+  }
+}
+.news_preview{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  max-width: $container-width;
+  column-gap: 15px;
+  
+  @include media($md){
+    grid-template-columns: repeat(2,1fr);
+  }
+  @include media($sm){
+    grid-template-columns: repeat(1,1fr);
+    padding: 20px 0px;
+  }
+}

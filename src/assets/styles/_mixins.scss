@@ -1,0 +1,35 @@
+
+
+// media mixins
+@mixin media($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+// liner line
+@mixin linear-line($display , $height,$bottom , $width ,$margin) {
+    content: '';
+    position: absolute;
+    bottom: $bottom;
+    left: 0;
+    width: $width;
+    height: $height;
+    background: linear-gradient(90deg, #EA14EC -2.04%, #1246CE 102.14%);
+    margin: $margin;
+    border-radius: 0 0 10px 10px;
+    display: $display;
+  }
+
+// 2 line after text ellipse
+@mixin ellipse() {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    max-height: 45px;
+    @include media($sm){
+        max-height: 32px;
+    }
+}
